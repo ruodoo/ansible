@@ -1,0 +1,30 @@
+# Update runbot code to head of branch and restart the runbot
+---
+- name: Update runbot code
+  hosts: runbot-all
+  vars:
+      branch: master
+  tasks:
+  - name: stop runbot service
+    systemd: 
+      name: runbot
+      state: stopped
+  - name: Fetch runbot repo
+    become: True
+    become_user: odoo
+    shell: git fetch
+    args:
+        chdir: /home/odoo/runbot/runbot
+  - name: Checkout runbot to branch
+    become: True
+    become_user: odoo
+    shell: git checkout {{ branch }}
+    args:
+        chdir: /home/odoo/runbot/runbot
+  - name: Rebase runbot branch
+    become: True
+    become_user: odoo
+    shell: git rebase
+    args:
+        chdir: /home/odoo/runbot/runbot
+

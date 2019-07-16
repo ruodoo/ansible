@@ -1,0 +1,7 @@
+/*
+!/.gitignore
+!/ansible.cfg
+!/inventories
+!/playbooks
+/playbooks/*
+!/playbooks/*.yml

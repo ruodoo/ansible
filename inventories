@@ -1,7 +1,7 @@
-[runbot-master]
+[runbot_master]
 runbot10.odoo.com ansible_user=root
 
-[runbot-all]
+[runbot_all]
 runbot10.odoo.com ansible_user=root
 runbot11.odoo.com ansible_user=root
 runbot13.odoo.com ansible_user=root
@@ -21,7 +21,7 @@ runbot26.odoo.com ansible_user=root
 runbot27.odoo.com ansible_user=root
 runbot28.odoo.com ansible_user=root
 
-[runbot-workers]
+[runbot_workers]
 runbot11.odoo.com ansible_user=root
 runbot13.odoo.com ansible_user=root
 runbot14.odoo.com ansible_user=root

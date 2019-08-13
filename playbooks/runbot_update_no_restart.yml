@@ -1,7 +1,7 @@
 # Update runbot code to head of branch and restart the runbot
 ---
 - name: Update runbot code
-  hosts: runbot-all
+  hosts: runbot_all
   vars:
       branch: master
   tasks:

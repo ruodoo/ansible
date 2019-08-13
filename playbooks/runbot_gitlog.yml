@@ -1,5 +1,5 @@
 - name: git log
-  hosts: runbot-all
+  hosts: runbot_all
   tasks:
   - name: show runbot git head
     become: True

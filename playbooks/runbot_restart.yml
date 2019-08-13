@@ -1,6 +1,6 @@
 ---
 - name: Start runbot
-  hosts: runbot-all
+  hosts: runbot_all
   tasks:
   - name: restart runbot service
     systemd: 

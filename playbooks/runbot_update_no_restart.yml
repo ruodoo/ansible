@@ -5,10 +5,6 @@
   vars:
       branch: master
   tasks:
-  - name: stop runbot service
-    systemd: 
-      name: runbot
-      state: stopped
   - name: Fetch runbot repo
     become: True
     become_user: odoo
@@ -27,4 +23,8 @@
     shell: git rebase
     args:
         chdir: /home/odoo/runbot/runbot
+  - name: stop runbot service
+    systemd:
+      name: runbot
+      state: stopped
 

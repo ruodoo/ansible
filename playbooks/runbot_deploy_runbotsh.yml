@@ -1,0 +1,10 @@
+- name: copy runbot sh
+  hosts: runbot_workers
+  tasks:
+  - name: copy runbotsh
+    become: True
+    become_user: odoo
+    copy:
+      src: runbotsh/runbot.sh
+      dest: ~/bin/runbot.sh
+

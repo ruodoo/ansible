@@ -1,0 +1,8 @@
+---
+- name: Stop runbot
+  hosts: runbot_workers
+  tasks:
+  - name: stop runbot service
+    systemd:
+      name: runbot
+      state: stopped

@@ -4,7 +4,7 @@
   - name: show runbot git head
     become: True
     become_user: odoo
-    command: git log --oneline -n 2
+    command: git log --pretty=format:"%d -- %h -- %an --%s" -n 1
     register: gitlog
     args:
         chdir: /home/odoo/runbot/runbot

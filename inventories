@@ -3,15 +3,6 @@ runbot30.odoo.com ansible_user=root
 
 [runbot_all]
 runbot30.odoo.com ansible_user=root
-runbot20.odoo.com ansible_user=root
-runbot21.odoo.com ansible_user=root
-runbot22.odoo.com ansible_user=root
-runbot23.odoo.com ansible_user=root
-runbot24.odoo.com ansible_user=root
-runbot25.odoo.com ansible_user=root
-runbot26.odoo.com ansible_user=root
-runbot27.odoo.com ansible_user=root
-runbot28.odoo.com ansible_user=root
 runbot29.odoo.com ansible_user=root
 runbot31.odoo.com ansible_user=root
 runbot32.odoo.com ansible_user=root
@@ -29,17 +20,15 @@ runbot43.odoo.com ansible_user=root
 runbot44.odoo.com ansible_user=root
 runbot45.odoo.com ansible_user=root
 runbot46.odoo.com ansible_user=root
+runbot47.odoo.com ansible_user=root
+runbot48.odoo.com ansible_user=root
+runbot49.odoo.com ansible_user=root
+runbot50.odoo.com ansible_user=root
+runbot51.odoo.com ansible_user=root
+runbot52.odoo.com ansible_user=root
 
 [runbot_workers]
 runbot20.odoo.com ansible_user=root
-runbot21.odoo.com ansible_user=root
-runbot22.odoo.com ansible_user=root
-runbot23.odoo.com ansible_user=root
-runbot24.odoo.com ansible_user=root
-runbot25.odoo.com ansible_user=root
-runbot26.odoo.com ansible_user=root
-runbot27.odoo.com ansible_user=root
-runbot28.odoo.com ansible_user=root
 runbot29.odoo.com ansible_user=root
 runbot31.odoo.com ansible_user=root
 runbot32.odoo.com ansible_user=root
@@ -57,4 +46,20 @@ runbot43.odoo.com ansible_user=root
 runbot44.odoo.com ansible_user=root
 runbot45.odoo.com ansible_user=root
 runbot46.odoo.com ansible_user=root
+runbot47.odoo.com ansible_user=root
+runbot48.odoo.com ansible_user=root
+runbot49.odoo.com ansible_user=root
+runbot50.odoo.com ansible_user=root
+runbot51.odoo.com ansible_user=root
+runbot52.odoo.com ansible_user=root
+
+[runbot_disbled]
+runbot21.odoo.com ansible_user=root
+runbot22.odoo.com ansible_user=root
+runbot23.odoo.com ansible_user=root
+runbot24.odoo.com ansible_user=root
+runbot25.odoo.com ansible_user=root
+runbot26.odoo.com ansible_user=root
+runbot27.odoo.com ansible_user=root
+runbot28.odoo.com ansible_user=root
 

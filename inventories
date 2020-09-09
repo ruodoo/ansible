@@ -51,4 +51,8 @@ runbot49.odoo.com ansible_user=root
 runbot50.odoo.com ansible_user=root
 runbot51.odoo.com ansible_user=root
 runbot52.odoo.com ansible_user=root
-
+runbot53.odoo.com ansible_user=root
+runbot54.odoo.com ansible_user=root
+runbot55.odoo.com ansible_user=root
+runbot56.odoo.com ansible_user=root
+runbot57.odoo.com ansible_user=root

@@ -20,7 +20,7 @@
   - name: Rebase runbot branch
     become: True
     become_user: odoo
-    shell: git rebase
+    shell: git rebase --autostash
     args:
         chdir: /home/odoo/runbot/runbot
   - name: restart runbot service

@@ -1,0 +1,16 @@
+---
+- name: disk usage build dir
+  hosts: runbot_workers
+  order: sorted
+  vars:
+      builds_dir: /home/odoo/runbot/runbot/runbot/static/build
+  tasks:
+  - name: show runbot build dir size
+    become: True
+    become_user: odoo
+    command: du -sh .
+    register: ducmd
+    args:
+        chdir: "{{ builds_dir }}"
+  - debug: msg="{{ ducmd.stdout }}"
+

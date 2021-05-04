@@ -1,0 +1,8 @@
+---
+- name: Start runbot
+  hosts: runbot_workers
+  tasks:
+  - name: start runbot service
+    systemd:
+      name: runbot
+      state: restarted

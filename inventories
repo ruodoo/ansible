@@ -35,6 +35,10 @@ runbot58.odoo.com ansible_user=root
 runbot59.odoo.com ansible_user=root
 runbot60.odoo.com ansible_user=root
 runbot61.odoo.com ansible_user=root
+runbot62.odoo.com ansible_user=root
+runbot63.odoo.com ansible_user=root
+runbot64.odoo.com ansible_user=root
+runbot65.odoo.com ansible_user=root
 
 [runbot_workers]
 runbot29.odoo.com ansible_user=root
@@ -69,4 +73,14 @@ runbot58.odoo.com ansible_user=root
 runbot59.odoo.com ansible_user=root
 runbot60.odoo.com ansible_user=root
 runbot61.odoo.com ansible_user=root
+runbot62.odoo.com ansible_user=root
+runbot63.odoo.com ansible_user=root
+runbot64.odoo.com ansible_user=root
+runbot65.odoo.com ansible_user=root
+
+[runbot_new]
+runbot62.odoo.com ansible_user=root
+runbot63.odoo.com ansible_user=root
+runbot64.odoo.com ansible_user=root
+runbot65.odoo.com ansible_user=root
 

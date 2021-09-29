@@ -93,14 +93,20 @@ runbot70.odoo.com ansible_user=root
 runbot71.odoo.com ansible_user=root
 runbot72.odoo.com ansible_user=root
 runbot73.odoo.com ansible_user=root
+runbot74.odoo.com ansible_user=root
+runbot75.odoo.com ansible_user=root
+runbot76.odoo.com ansible_user=root
+runbot77.odoo.com ansible_user=root
 
 [runbot_new]
-runbot66.odoo.com ansible_user=root
-runbot67.odoo.com ansible_user=root
-runbot68.odoo.com ansible_user=root
-runbot69.odoo.com ansible_user=root
-runbot70.odoo.com ansible_user=root
-runbot71.odoo.com ansible_user=root
-runbot72.odoo.com ansible_user=root
-runbot73.odoo.com ansible_user=root
+runbot74.odoo.com ansible_user=root
+runbot75.odoo.com ansible_user=root
+runbot76.odoo.com ansible_user=root
+runbot77.odoo.com ansible_user=root
+
+[runbot_zfs]
+runbot74.odoo.com ansible_user=root
+runbot75.odoo.com ansible_user=root
+runbot76.odoo.com ansible_user=root
+runbot77.odoo.com ansible_user=root
 

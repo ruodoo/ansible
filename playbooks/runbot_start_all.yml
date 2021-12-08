@@ -1,0 +1,16 @@
+---
+- name: Start runbot
+  hosts: runbot_all
+  tasks:
+    - name: start runbot service
+      systemd:
+        name: runbot
+        state: started
+
+- name: Start Runbot Leader
+  hosts: runbot_master
+  tasks:
+    - name: start runbot leader service
+      systemd:
+        name: runbot_leader
+        state: started

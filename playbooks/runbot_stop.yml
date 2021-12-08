@@ -1,8 +1,0 @@
----
-- name: Stop runbot
-  hosts: runbot_all
-  tasks:
-  - name: stop runbot service
-    systemd: 
-      name: runbot
-      state: stopped

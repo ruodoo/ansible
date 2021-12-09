@@ -1,0 +1,10 @@
+---
+- name: Remove backup
+  hosts: runbot_workers
+  become: yes
+  become_user: odoo
+  tasks:
+  - name: remove build-backup dir
+    file:
+      state: absent
+      path: /home/odoo/runbot/runbot/runbot/static/build-backup

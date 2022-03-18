@@ -1,0 +1,44 @@
+# Update runbot code to head of branch and
+# stop the runbot service on workers
+# stop the runbot_leader service on runbot leader
+# give the branch varaible like this `--extra-vars "branch=13.0-fix-concurrency"`
+---
+- name: Update runbot code
+  hosts: runbot_all
+  vars:
+      branch: 13.0
+  tasks:
+    - name: Fetch runbot repo
+      become: True
+      become_user: odoo
+      shell: git fetch
+      args:
+          chdir: /home/odoo/runbot/runbot
+    - name: Checkout runbot to branch
+      become: True
+      become_user: odoo
+      shell: git checkout {{ branch }}
+      args:
+          chdir: /home/odoo/runbot/runbot
+    - name: Rebase runbot branch
+      become: True
+      become_user: odoo
+      shell: git rebase
+      args:
+          chdir: /home/odoo/runbot/runbot
+
+- name: Restart runbot workers
+  hosts: runbot_workers
+  tasks:
+    - name: restart runbot service
+      systemd:
+        name: runbot
+        state: restarted
+
+- name: Restart runbot leader
+  hosts: runbot_master
+  tasks:
+    - name: restart runbot leader service
+      systemd:
+        name: runbot_leader
+        state: restarted

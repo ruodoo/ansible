@@ -1,5 +1,5 @@
 [runbot_master]
-runbot30.odoo.com ansible_user=root
+runbot100.odoo.com ansible_user=root
 
 [runbot_workers]
 runbot29.odoo.com ansible_user=root

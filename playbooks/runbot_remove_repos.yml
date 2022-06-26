@@ -1,0 +1,19 @@
+# Remove repositories on workers
+---
+- name: Remove Repositories
+  hosts: runbot_workers
+  tasks:
+  - name: stop runbot service
+    systemd:
+        name: runbot
+        state: stopped
+  - name: remove repos
+    become: True
+    become_user: odoo
+    ansible.builtin.file:
+      path: /home/odoo/runbot/runbot/runbot/static/repo
+      state: absent
+  - name: start runbot service
+    systemd:
+        name: runbot
+        state: started

@@ -1,0 +1,10 @@
+# This playbook will comment the git gc in cron for runbot
+- name: comment gc all in runbot cron
+  hosts: runbot_workers
+  tasks:
+  - name: show runbot git head
+    replace:
+        path: /etc/cron.d/runbot
+        regexp: '^(10 .+git_gc_all.sh)'
+        replace: '#\1'
+

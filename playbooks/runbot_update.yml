@@ -3,7 +3,7 @@
 - name: Update runbot code
   hosts: runbot_all
   vars:
-      branch: 15.0
+      branch: 16.0
   tasks:
   - name: Fetch runbot repo
     become: True

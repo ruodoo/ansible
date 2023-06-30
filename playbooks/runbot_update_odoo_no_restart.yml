@@ -1,0 +1,25 @@
+# Update Odoo code to head of branch without restart
+---
+- name: Update Odoo code
+  hosts: runbot_all
+  vars:
+    branch: 16.0
+  tasks:
+  - name: Fetch odoo repo
+    become: True
+    become_user: odoo
+    shell: git fetch
+    args:
+        chdir: /home/odoo/runbot/odoo
+  - name: Checkout Odoo branch
+    become: True
+    become_user: odoo
+    shell: git checkout {{ branch }}
+    args:
+        chdir: /home/odoo/runbot/odoo
+  - name: Rebase Odoo branch
+    become: True
+    become_user: odoo
+    shell: git rebase
+    args:
+        chdir: /home/odoo/runbot/odoo

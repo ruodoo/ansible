@@ -1,0 +1,26 @@
+# Update runbot code to head of branch without restart
+---
+- name: Update runbot code
+  hosts: runbot_workers
+  vars:
+      branch: 16.0
+  tasks:
+  - name: Fetch runbot repo
+    become: True
+    become_user: odoo
+    shell: git fetch
+    args:
+        chdir: /home/odoo/runbot/runbot
+  - name: Checkout runbot to branch
+    become: True
+    become_user: odoo
+    shell: git checkout {{ branch }}
+    args:
+        chdir: /home/odoo/runbot/runbot
+  - name: Rebase runbot branch
+    become: True
+    become_user: odoo
+    shell: git rebase --autostash
+    args:
+        chdir: /home/odoo/runbot/runbot
+

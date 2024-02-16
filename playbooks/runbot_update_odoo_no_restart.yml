@@ -3,7 +3,7 @@
 - name: Update Odoo code
   hosts: runbot_all
   vars:
-    branch: 16.0
+    branch: 17.0
   tasks:
   - name: Fetch odoo repo
     become: True

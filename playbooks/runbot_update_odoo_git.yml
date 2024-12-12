@@ -1,0 +1,25 @@
+# Update odoo git config to add a new version
+---
+- name: Update Odoo Git
+  hosts: runbot_workers
+  vars:
+    branch: 18.0
+  tasks:
+  - name: Set new remote
+    become: True
+    become_user: odoo
+    shell: git remote set-branches --add origin {{ branch }}
+    args:
+        chdir: /home/odoo/runbot/odoo
+  - name: Update Remote
+    become: True
+    become_user: odoo
+    shell: git remote update
+    args:
+        chdir: /home/odoo/runbot/odoo
+  - name: Add branch
+    become: True
+    become_user: odoo
+    shell: git branch --track {{ branch }} origin/{{ branch }}
+    args:
+        chdir: /home/odoo/runbot/odoo

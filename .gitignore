@@ -5,3 +5,5 @@
 !/playbooks
 /playbooks/*
 !/playbooks/*.yml
+!/scripts
+!/scripts/*

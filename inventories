@@ -143,3 +143,14 @@ runbot256.odoo.com ansible_user=root
 runbot_master
 runbot_workers
 
+[psrunbot_master]
+psrunbot-l1.odoo.com ansible_user=root
+
+[psrunbot_workers]
+psrunbot11.odoo.com ansible_user=root
+psrunbot12.odoo.com ansible_user=root
+psrunbot13.odoo.com ansible_user=root
+
+[psrunbot_all:children]
+psrunbot_master
+psrunbot_workers

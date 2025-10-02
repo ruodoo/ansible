@@ -3,7 +3,7 @@
 - name: Update Odoo Git
   hosts: runbot_workers
   vars:
-    branch: 18.0
+    branch: 19.0
   tasks:
   - name: Set new remote
     become: True

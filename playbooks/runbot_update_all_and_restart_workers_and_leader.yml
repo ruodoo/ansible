@@ -1,12 +1,12 @@
 # Update runbot code to head of branch and
 # stop the runbot service on workers
 # stop the runbot_leader service on runbot leader
-# give the branch varaible like this `--extra-vars "branch=15.0-fix-concurrency"`
+# give the branch variable like this `--extra-vars "branch=15.0-fix-concurrency"`
 ---
 - name: Update runbot code
   hosts: runbot_all
   vars:
-      branch: 18.0
+      branch: 19.0
   tasks:
     - name: Fetch runbot repo
       become: True

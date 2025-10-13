@@ -12,5 +12,12 @@
   tasks:
     - name: stop runbot leader service
       systemd:
-        name: runbot_leader
+        name: runbot-leader
+        state: stopped
+- name: Stop Runbot Frontent
+  hosts: runbot_master
+  tasks:
+    - name: stop runbot runbot service
+      systemd:
+        name: runbot
         state: stopped

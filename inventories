@@ -148,6 +148,16 @@ runbot263.odoo.com ansible_user=root
 runbot264.odoo.com ansible_user=root
 runbot265.odoo.com ansible_user=root
 runbot266.odoo.com ansible_user=root
+runbot267.odoo.com ansible_user=root
+runbot268.odoo.com ansible_user=root
+runbot269.odoo.com ansible_user=root
+runbot270.odoo.com ansible_user=root
+runbot271.odoo.com ansible_user=root
+runbot272.odoo.com ansible_user=root
+runbot273.odoo.com ansible_user=root
+runbot274.odoo.com ansible_user=root
+runbot275.odoo.com ansible_user=root
+runbot276.odoo.com ansible_user=root
 
 [runbot_all:children]
 runbot_master

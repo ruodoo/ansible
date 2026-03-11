@@ -1,6 +1,6 @@
 #! /bin/bash
 
-for i in {287..296}
+for i in {297..309}
 do
      # The following will remove the old known_host from your ~/.ssh/known_hosts file
      # This is necessary if some servers get reinstalled.
